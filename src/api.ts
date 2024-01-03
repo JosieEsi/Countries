@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const http = axios.create({
-    baseURL: "https://restcountries.com/v3.1"
+    baseURL: "https://restcountries.com/v2"
 })
 
 export const api = {
