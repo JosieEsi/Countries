@@ -24,8 +24,26 @@ height: calc(100vh - 90px);
     align-items: center;
     width: 120px;
     height: 40px;
-    box-shadow: 1px 1px 1em rgba(0, 0, 0, 0.2);
-
-     
+    box-shadow: 1px 1px 1em rgba(0, 0, 0, 0.2);   
 }
+
+@media(min-width: 768px) and (max-width: 1024px){
+    &{
+        padding: 20px;
+    }
+    .container {
+        width: auto
+    }
+}
+
+@media (max-width: 767px){
+    &{
+        height: auto;
+        padding: 20px;
+    }
+    .container {
+        width: auto
+    }
+}
+
 `

@@ -2,10 +2,12 @@ import * as C from './styles'
 import { InputTS } from '../../types/Input'
 import { useState } from 'react'
 import useDebounce from './useDebounce'
+import { ReactComponent as SearchOutline } from './searchOutline.svg'
+
 
 const delay = 500
 
-export const Input = ({value, setSearch}: InputTS) => {
+export const Input= ({value, setSearch}: InputTS) => {
 
     const [input, setInput] =useState('')
 
@@ -13,17 +15,22 @@ export const Input = ({value, setSearch}: InputTS) => {
 
     const handleChange = (e: string) => {
         setInput(e)
+        debouncedChange(e)
     }
 
- 
+   
     return (
         <C.InputArea>
+            
+            <div className='input-block'>
+            < SearchOutline className='search'/>
             <input 
             type="text"
             placeholder='Search for a country...'
             value={input}
             onChange={e => handleChange(e.target.value)}
             />
+            </div>
             <select onChange={e => handleChange(e.target.value)}>
                 <option value="Filter by Region" disabled selected >Filter by Region</option>
                 <option value="Africa">Africa</option>
@@ -32,6 +39,11 @@ export const Input = ({value, setSearch}: InputTS) => {
                 <option value="Europe">Europe</option>
                 <option value="Oceania">Oceania</option>
             </select>
+            
         </C.InputArea>
     )
 }
+
+
+
+   
