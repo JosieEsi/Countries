@@ -3,6 +3,28 @@ import styled from "styled-components";
 export const CountryPage = styled.main`
 height: calc(100vh - 90px);
 
+&.dark-mode{
+    
+        .container{
+            div{
+            .arrow svg path{
+                fill: white;
+            }
+        } 
+        }
+        
+
+    .back--button{
+        color: white;
+    }
+
+    .loading{
+        color: white;
+    }
+
+    
+}
+
 .container{
     width: 1024px;
     margin: auto;
@@ -24,7 +46,8 @@ height: calc(100vh - 90px);
     align-items: center;
     width: 120px;
     height: 40px;
-    box-shadow: 1px 1px 1em rgba(0, 0, 0, 0.2);   
+    box-shadow: 1px 1px 1em rgba(0, 0, 0, 0.2); 
+    position: relative;  
 }
 
 @media(min-width: 768px) and (max-width: 1024px){

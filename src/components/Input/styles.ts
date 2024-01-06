@@ -50,9 +50,12 @@ select{
 
     .input-block{
         color: white;
+        outline: 0;
+        background-color:  #2B3844
     }
 
     select{
+        background-color:  #2B3844;
         color: white;
     }
 
@@ -60,8 +63,8 @@ select{
   
 &.dark-mode {
     input {
-      background-color: #333333; /* Set the dark mode background color for the input */
-      color: #ffffff; /* Set the text color for dark mode */
+      background-color:#2B3844; /* Set the dark mode background color for the input */
+      color: white; /* Set the text color for dark mode */
     }
   }
 

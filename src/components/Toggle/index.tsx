@@ -1,18 +1,13 @@
+import React from 'react';
 import * as C from './styles';
-import { useState } from 'react';
+import { useDarkMode } from '../../DarkModeContext';
 import { ReactComponent as SolidMoon } from './solidMoon.svg';
 import { ReactComponent as RegularMoon } from './regularMoon.svg';
 
-interface ToggleProps {
-    darkMode: boolean;
-    setDarkMode: (darkMode: boolean) => void;
-  }
-
-  export const Toggle: React.FC<ToggleProps> = ({ darkMode, setDarkMode }) => {
-    const toggleDarkMode = () => {
-      document.body.classList.toggle("dark-mode");
-      setDarkMode(!darkMode);
-    };
+  
+  export const Toggle = () => {
+    
+    const { darkMode, toggleDarkMode } = useDarkMode();
   
   return (
     <C.Toggle>
@@ -21,7 +16,7 @@ interface ToggleProps {
           <div className="toggle-light">
             <RegularMoon />
             <p>Light Mode</p>
-        </div>
+        </div> 
         ) : (
           <div className="toggle-dark">
             <SolidMoon />

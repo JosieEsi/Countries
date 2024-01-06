@@ -4,6 +4,24 @@ export const CountryData = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 
+    &.dark-mode {
+        color: white;
+
+        .data--area{
+            .border-area{
+                .borders{
+                    a {
+                        color: white;
+                    }
+                }
+
+            }
+        }
+
+      
+    }
+
+
     img{
        width: 440px;
        height: 300px; 

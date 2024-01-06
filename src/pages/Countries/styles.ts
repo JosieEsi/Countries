@@ -3,6 +3,14 @@ import styled from "styled-components";
 export const CountriesArea = styled.main`
 min-height: calc(100vh) - 90px;
 
+&.dark-mode{
+    .countries{
+        .load{
+            color: white;
+        }
+    }
+}
+
 .countries {
      display: grid;
      width: 1024px;

@@ -1,6 +1,7 @@
 import * as C from "./styles"
 import { SingleCountryTS } from "../../types/SingleCountry"
 import { Link } from "react-router-dom"
+import { useDarkMode } from '../../DarkModeContext'
 
 export const SingleCountry = ({
     name,
@@ -15,11 +16,12 @@ export const SingleCountry = ({
     borders,
     flag
 }: SingleCountryTS) => {
+    const { darkMode } = useDarkMode();
    
     return (
-        <C.CountryData>
+        <C.CountryData className={darkMode ? 'dark-mode' : ''}>
             <img src={flag} alt={`Flag of country: ${name} `}/>
-            <div className="data--area">
+            <div className={`data--area {darkMode ? 'dark-mode' : ''}`}>
                 <h1>{name}</h1>
                 <div className='data--firstArea'>
                     <p><span>Native Name: </span>{nativeName}</p>
@@ -40,9 +42,9 @@ export const SingleCountry = ({
                     </p>
                 </div>
                     {borders &&
-                    <div className="border-area">
+                    <div className={`border-area {darkMode ? 'dark-mode' : ''}`}>
                         <p>Border Countries: </p>
-                        <div className="borders">
+                        <div className={`borders {darkMode ? 'dark-mode' : ''}`}>
                             {borders.map((item, index) => <Link to={`/code/${item}`} key={index}>{item}</Link>)} 
                         </div>
                     </div>

@@ -19,7 +19,7 @@ box-shadow: 2px 2px 1em rgba(0, 0, 0, 0.2);
 
 
 &.dark-mode {
-    background-color: #202c36; /* Set the dark mode background color */
+    background-color: #2B3844; /* Set the dark mode background color */
 
    .container{
     h1{

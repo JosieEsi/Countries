@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react'
 import { CountryTS } from '../../types/Country'
 import { SingleCountry } from '../../components/SingleCountry'
 import { api } from '../../api'
+import { useDarkMode } from '../../DarkModeContext'
+import { ReactComponent as ArrowBack } from '../CountryPage/arrowBack.svg'
 
 
 export const CountryPage = () => {
@@ -11,6 +13,8 @@ export const CountryPage = () => {
 
     const [loading, setLoading] = useState (false)
     const [country, setCountry] = useState<CountryTS[]>([])
+
+    const { darkMode } = useDarkMode()
 
     useEffect(()=>{
         if(name){
@@ -28,11 +32,14 @@ export const CountryPage = () => {
     }
 
     return(
-        <C.CountryPage>
-            <div className='container'>
-                <Link to="/" className='back--button'>Back</Link>
+        <C.CountryPage className={darkMode ? 'dark-mode' : ''}>
+            <div className={`container {darkMode ? 'dark-mode' : ''}`}>
+                <div>
+                < ArrowBack className={`arrow {darkMode ? 'dark-mode' : ''}`}/>
+                <Link to="/" className={`back--button {darkMode ? 'dark-mode' : ''}`}>Back</Link>
+                </div>
                 {loading &&
-                    <div className='loading'>Loading...</div>
+                    <div className={`loading {darkMode ? 'dark-mode' : ''}`}>Loading...</div>
                 }
                 {!loading &&
                     country.map((item) => (

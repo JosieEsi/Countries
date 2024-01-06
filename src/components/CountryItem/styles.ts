@@ -5,7 +5,13 @@ background-color: #FFF;
 box-shadow: 2px 2px 1em rgba(0, 0, 0, 0.2);
 border-radius: 4px;
 
-
+&.dark-mode {
+    background-color: #2B3844; /* Set the dark mode background color */
+    
+    a{
+        color: white;
+    }
+}
 
 a{
     text-decoration: none;

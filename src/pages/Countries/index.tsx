@@ -4,12 +4,14 @@ import { Input } from '../../components/Input'
 import { CountriesTS } from '../../types/Countries'
 import { CountryItem } from '../../components/CountryItem'
 import { api } from '../../api'
+import { useDarkMode } from '../../DarkModeContext'
 
 
 export const Countries = () => {
     const [countries, setCountries] = useState<CountriesTS[]>([])
     const [search, setSearch] = useState('')
     const [loading, setLoading] = useState(false)
+    const { darkMode } = useDarkMode()
 
     useEffect(()=>{
         getAllCountries()
@@ -30,14 +32,14 @@ export const Countries = () => {
 
      
     return (
-        <C.CountriesArea>
+        <C.CountriesArea className={darkMode ? 'dark-mode' : ''}>
             <Input
                 value={search}
                 setSearch={setSearch}
             />
-            <div className='countries'>
+            <div className={`countries {darkMode ? 'dark-mode' : ''}`}>
                 {loading &&
-                    <div className=''>Loading...</div>
+                    <div className={`load {darkMode ? 'dark-mode' : ''}`}>Loading...</div>
                 }
                 {!loading &&
                     filteredCountries.map
@@ -48,7 +50,7 @@ export const Countries = () => {
                             region={item.region}
                             capital={item.capital}
                             flag={item.flags.png}
-                        />
+                                                    />
                     ))
                 }
             </div>

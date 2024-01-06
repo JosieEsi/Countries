@@ -3,13 +3,18 @@ import { InputTS } from '../../types/Input'
 import { useState } from 'react'
 import useDebounce from './useDebounce'
 import { ReactComponent as SearchOutline } from './searchOutline.svg'
+import { useDarkMode } from '../../DarkModeContext'
 
 
 const delay = 500
 
+
+
 export const Input= ({value, setSearch}: InputTS) => {
 
     const [input, setInput] =useState('')
+
+    const { darkMode } = useDarkMode();
 
     const debouncedChange = useDebounce(setSearch, delay)
 
@@ -20,7 +25,7 @@ export const Input= ({value, setSearch}: InputTS) => {
 
    
     return (
-        <C.InputArea>
+        <C.InputArea className={darkMode ? 'dark-mode' : ''}>
             
             <div className='input-block'>
             < SearchOutline className='search'/>
@@ -29,10 +34,11 @@ export const Input= ({value, setSearch}: InputTS) => {
             placeholder='Search for a country...'
             value={input}
             onChange={e => handleChange(e.target.value)}
+            className={darkMode ? 'dark-mode' : ''}
             />
             </div>
-            <select onChange={e => handleChange(e.target.value)}>
-                <option value="Filter by Region" disabled selected >Filter by Region</option>
+            <select onChange={e => handleChange(e.target.value)} className={darkMode ? 'dark-mode' : ''}>
+                <option value="Filter by Region"  disabled selected >Filter by Region</option>
                 <option value="Africa">Africa</option>
                 <option value="America">America</option>
                 <option value="Asia">Asia</option>
