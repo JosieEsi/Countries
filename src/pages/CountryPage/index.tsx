@@ -34,8 +34,8 @@ export const CountryPage = () => {
     return(
         <C.CountryPage className={darkMode ? 'dark-mode' : ''}>
             <div className={`container {darkMode ? 'dark-mode' : ''}`}>
-                <div>
-                < ArrowBack className={`arrow {darkMode ? 'dark-mode' : ''}`}/>
+                <div className='back-container'>
+                < ArrowBack className={`arrow {darkMode ? 'dark-mode' : ''}`} style={{ fill: darkMode ? '#FFF' : '#000' }}/><path opacity="1" fill="#000"  stroke="#000" stroke-width="0.001" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
                 <Link to="/" className={`back--button {darkMode ? 'dark-mode' : ''}`}>Back</Link>
                 </div>
                 {loading &&

@@ -5,12 +5,12 @@ height: calc(100vh - 90px);
 
 &.dark-mode{
     
-        .container{
-            div{
-            .arrow svg path{
-                fill: white;
+        .back-container{
+          .arrow{
+            path{
+          fill: white;
             }
-        } 
+          }
         }
         
 
@@ -36,7 +36,7 @@ height: calc(100vh - 90px);
     min-height: 100vh;
 }
 
-.back--button{
+.back-container{
     text-decoration: none;
     color: #000;
     margin-bottom: 30px;
@@ -48,6 +48,17 @@ height: calc(100vh - 90px);
     height: 40px;
     box-shadow: 1px 1px 1em rgba(0, 0, 0, 0.2); 
     position: relative;  
+    
+}
+.back--button{
+    text-decoration: none;
+    color: #000;
+    
+       
+}
+.arrow {
+    margin-right: 10px;
+
 }
 
 @media(min-width: 768px) and (max-width: 1024px){
