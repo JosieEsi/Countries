@@ -29,6 +29,7 @@ export const CountryData = styled.div`
 
     .data--area{
         display: flex;
+        grid-template-columns: repeat(2, 1fr);
         flex-direction: column;
         justify-content: center;
 
@@ -36,11 +37,30 @@ export const CountryData = styled.div`
             margin: 0px;
         }
 
+    .area{
+        display: flex;
+        flex-direction: row;
+        
+
+
         .data--firstArea{  
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 1fr;
             margin-top: 20px;
             
+            p{
+                margin: 5px 0px;
+                span{
+                    font-weight: bold;
+                }
+            }
+           
+        }
+
+        .data--secondArea{
+           margin-top: 20px;
+           margin-left: 70px;
+        
             p{
                 margin: 5px 0px;
                 span{
@@ -54,7 +74,7 @@ export const CountryData = styled.div`
             }
 
         }
-
+    }
         .border-area{
             margin-top: 20px;
             p{
@@ -83,7 +103,7 @@ export const CountryData = styled.div`
         }
     }
 
-    @media(min-width: 768px) and (max-width: 1023px){
+    @media(min-width: 768px) and (max-width: 1024px){
         &{
             img{
                 width: 340px;
@@ -96,6 +116,13 @@ export const CountryData = styled.div`
                 }
 
                 .data--firstArea{
+                    p, span{
+                        font-size: 14px;
+
+                    }
+                }
+
+                .data--secondArea{
                     p, span{
                         font-size: 14px;
 
@@ -131,16 +158,29 @@ export const CountryData = styled.div`
                     font-size: 17px;
                 }
 
-                .data--firstArea{
+                .area{
+                    display: grid;
                     grid-template-columns: 1fr;
-                    p, span{
-                       font-size: 12px; 
-                    }
-                    .topLevel{
-                        margin-top: 40px;
-                    }
-                }
 
+                    .data--firstArea{
+                        grid-template-columns: 1fr;
+                        p, span{
+                        font-size: 12px; 
+                        }
+                    }
+
+                    .data--secondArea{
+                        grid-template-columns: 1fr;
+                        margin-left: 0px;
+
+                        p, span{
+                        font-size: 12px; 
+                        }
+                        .topLevel{
+                            margin-top: 20px;
+                        }
+                    }
+            }
                 .border--area{
                     .borders {
                         grid-template-columns: repeat(3, 1fr);

@@ -23,6 +23,7 @@ export const SingleCountry = ({
             <img src={flag} alt={`Flag of country: ${name} `}/>
             <div className={`data--area {darkMode ? 'dark-mode' : ''}`}>
                 <h1>{name}</h1>
+                <div className="area">
                 <div className='data--firstArea'>
                     <p><span>Native Name: </span>{nativeName}</p>
                     <p><span>Population: </span>{population}</p>
@@ -31,6 +32,8 @@ export const SingleCountry = ({
                     {capital &&
                         <p><span>Capital: </span>{capital}</p>
                     }
+                    </div>
+                    <div className='data--secondArea'>
                     <p className="topLevel"><span>Top Level Domain</span>{topLevelDomain}</p>
                     {currencie &&
                     <p><span>Currencies: </span>{currencie.map(item => item.name)}</p>
@@ -40,7 +43,8 @@ export const SingleCountry = ({
                         <span key={index} className='language'>{item.name}</span>
                     ))}
                     </p>
-                </div>
+                    </div>
+                    </div>
                     {borders &&
                     <div className={`border-area {darkMode ? 'dark-mode' : ''}`}>
                         <p>Border Countries: </p>

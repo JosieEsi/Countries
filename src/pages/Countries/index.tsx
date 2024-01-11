@@ -30,7 +30,8 @@ export const Countries = () => {
     const filteredCountries = countries.filter(country => country.name.toLowerCase().includes(lowerSearch) || country.region.toLowerCase().includes(lowerSearch)
     )
 
-     
+   
+       
     return (
         <C.CountriesArea className={darkMode ? 'dark-mode' : ''}>
             <Input
