@@ -13,7 +13,7 @@ min-height: calc(100vh) - 90px;
 
 .countries {
      display: grid;
-     width: 1024px;
+     width: 1440px;
      margin: auto;
      grid-template-columns: repeat(4, 1fr);
      grid-gap: 30px
@@ -21,7 +21,7 @@ min-height: calc(100vh) - 90px;
   
 }
 
-@media(max-width: 1024px){
+@media(max-width: 1440px){
     .countries{
         width: auto;
         padding: 0px 20px;

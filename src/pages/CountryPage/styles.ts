@@ -26,7 +26,7 @@ height: calc(100vh - 90px);
 }
 
 .container{
-    width: 1024px;
+    width: 1440px;
     margin: auto;
     padding; 40px 0px;
 
@@ -61,7 +61,7 @@ height: calc(100vh - 90px);
 
 }
 
-@media(min-width: 768px) and (max-width: 1024px){
+@media(min-width: 768px) and (max-width: 1440px){
     &{
         padding: 20px;
     }

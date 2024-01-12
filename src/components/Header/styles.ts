@@ -7,7 +7,7 @@ box-shadow: 2px 2px 1em rgba(0, 0, 0, 0.2);
 
 .container {
     display: flex;
-    width: 1024px;
+    width: 1440px;
     margin: auto;
     justify-content: space-between;
     align-items: center;
@@ -32,7 +32,7 @@ box-shadow: 2px 2px 1em rgba(0, 0, 0, 0.2);
    } 
   }
 
-@media(max-width: 1024px){
+@media(max-width: 1440px){
     &{
         padding: 0px 20px;
 

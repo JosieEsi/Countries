@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const InputArea = styled.section`
 display: flex;
-width: 1024px;
+width: 1440px;
 margin: auto;
 justify-content: space-between;
 padding: 40px 0px;
@@ -17,7 +17,7 @@ padding: 40px 0px;
     flex-direction: row;
     align-items: center;
     height: 50px;
-    width: 450px;
+    width: auto;
     border-radius: 2px;
     padding: 0px 10px;
     box-shadow: 2px 2px 1em rgba(0, 0, 0, 0.2);
@@ -68,11 +68,11 @@ select{
     }
   }
 
-@media(max-width: 1024px){
+@media(max-width: 1440px){
     &{
         width: auto;
         padding: 20px
-        
+     
     }
 }
 
@@ -92,5 +92,7 @@ select{
 
 
 }
+
+
 
 `
