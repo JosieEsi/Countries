@@ -23,16 +23,16 @@ export const CountryData = styled.div`
 
 
     img{
-       width: 440px;
+       width: 540px;
        height: 300px; 
+       border-radius: 1%;
     }
 
     .data--area{
         display: flex;
         grid-template-columns: repeat(2, 1fr);
         flex-direction: column;
-        justify-content: center;
-
+        margin-top: 10px;
         h1{
             margin: 0px;
         }
@@ -59,10 +59,10 @@ export const CountryData = styled.div`
 
         .data--secondArea{
            margin-top: 20px;
-           margin-left: 70px;
+           margin-left: 100px;
         
             p{
-                margin: 5px 0px;
+                margin: 15px 0px;
                 span{
                     font-weight: bold;
                 }
@@ -103,11 +103,12 @@ export const CountryData = styled.div`
         }
     }
 
-    @media(min-width: 768px) and (max-width: 1440px){
+    @media(min-width: 1024px) and (max-width: 1440px){
         &{
             img{
-                width: 340px;
-                height: 200px;
+                width: 80%;
+                height: 70%;
+               
             }
 
             .data--area{
@@ -139,6 +140,45 @@ export const CountryData = styled.div`
         }
     }
 
+
+    @media(min-width: 768px) and (max-width: 1023px){
+        &{
+            img{
+                width: 80%;
+                height: 70%;
+               
+            }
+
+            .data--area{
+                h1{
+                    font-size: 22px
+                }
+
+                .data--firstArea{
+                    p, span{
+                        font-size: 12px;
+
+                    }
+                }
+
+                .data--secondArea{
+                    p, span{
+                        font-size: 12px;
+
+                    }
+                }
+            
+
+                .border--area{
+                    p, span, a{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+
     @media(max-width: 767px){
         &{
             grid-template-columns: 1fr;
@@ -146,12 +186,12 @@ export const CountryData = styled.div`
             img{
                 width: 280px;
                 height: 180px;
-                margin: auto;
+                margin: 5px;
             }
 
             .data--area{
                 width: 280px;
-                margin: auto;
+                margin: 5px;
                 margin-top: 30px;
 
                 h1{

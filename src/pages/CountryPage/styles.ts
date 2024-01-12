@@ -78,6 +78,8 @@ height: calc(100vh - 90px);
     .container {
         width: auto
     }
+
+  
 }
 
 `
